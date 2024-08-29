@@ -15,3 +15,16 @@ pub fn bin_search<T: Ord>(arr: &[T], val: T) -> Option<usize> {
     None
 }
 
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn n() {
+        let arr: [usize; 1_000] = core::array::from_fn(|i| i * 2);
+        assert_eq!(bin_search(&arr, 0), Some(0));
+        assert_eq!(bin_search(&arr, 100), Some(50));
+        assert_eq!(bin_search(&arr, 1), None);
+        assert_eq!(bin_search(&arr, 10_000), None);
+    }
+}
