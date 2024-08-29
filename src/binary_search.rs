@@ -14,3 +14,4 @@ pub fn bin_search<T: Ord>(arr: &[T], val: T) -> Option<usize> {
     }
     None
 }
+
