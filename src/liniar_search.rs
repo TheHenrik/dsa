@@ -1,4 +1,5 @@
 pub fn lin_search<T: Eq>(arr: &[T], val: T) -> Option<usize> {
+    // arr.iter().filter(|&&x| x == val)
     for (i, v) in arr.iter().enumerate() {
         if *v == val {
             return Some(i);
@@ -15,6 +16,8 @@ pub fn count<T: Eq>(arr: &[T], val: T) -> Option<usize> {
             c += 1;
         }
     }
+
+    // c = arr.into_iter().filter(|&&x| x == val);
 
     if c == 0 {
         return None;
