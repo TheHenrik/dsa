@@ -1,4 +1,4 @@
-pub fn bin_search<T: Ord>(arr: &[T], val: T) -> Option<usize> {
+pub fn bin_search<T: PartialOrd>(arr: &[T], val: T) -> Option<usize> {
     let mut l = 0;
     let mut r = arr.len() - 1;
 
